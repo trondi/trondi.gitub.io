@@ -6,6 +6,13 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     /*{
@@ -18,13 +25,7 @@ module.exports = {
     
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-plugin-typescript',
-      options: {
-        isTSX: true,
-        allExtensions: true,
-      },
-    },
+
     /*{
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,6 +40,8 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },*/
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
