@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",                               
-    "esModuleInterop": true,                            
-    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
     "allowJs": true,
-    "outDir": "생성됨",
-    "jsx": "preserve",          
-    "strict": true,                                      /* Enable all strict type-checking options. */
+    "jsx": "preserve",
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -17,8 +14,10 @@
       "utils/*": ["./utils/*"],
       "hooks/*": ["./hooks/*"]
     },
-    "resolveJsonModule": true,
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*.tsx"],
   "exclude": ["node_modules"]
