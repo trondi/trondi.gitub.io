@@ -23,7 +23,7 @@ const defaultStyle = css`
     text-decoration: none;
     cursor: pointer;
   }
-`
+`;
 
 const GlobalStyle: FunctionComponent = function () {
   return <Global styles={defaultStyle} />
