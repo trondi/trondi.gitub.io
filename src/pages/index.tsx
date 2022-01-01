@@ -2,8 +2,9 @@ import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/GlobalStyed'
 import Footer from 'components/Common/Footer'
-import Introduction from 'components/Main/Introduction'
 import CategoryList from 'components/Main/CategoryList'
+import Introduction from 'components/Main/Introduction'
+import PostList from 'components/Main/PostList'
 
 const CATEGORY_LIST = {
   All: 5,
@@ -23,6 +24,7 @@ const IndexPage: FunctionComponent = function () {
         <GlobalStyle />
         <Introduction />
         <CategoryList selectedCategory="web" categoryList={CATEGORY_LIST} />
+        <PostList />
         <Footer />
       </Container>
       )
