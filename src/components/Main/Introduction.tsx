@@ -4,7 +4,7 @@ import ProfileImage from './ProfileImage'
 
 const Background = styled.div`
     width: 100%;
-    background-image: linear-gradient(6s0deg, #6667AB 50%, #8f90cf 100%);
+    background-image: linear-gradient(60deg, #6667AB 50%, #8f90cf 100%);
     color: #ffffff;
 `;
 
