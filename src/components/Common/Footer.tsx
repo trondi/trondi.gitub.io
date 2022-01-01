@@ -15,6 +15,9 @@ const Footer: FunctionComponent = function () {
     return (
         <FooterWrapper>
             Thnk u 4 visiting my blog, have a good day 🥰
+            <br />© 2021 Developer Trondi, Powered By Gatsby.
         </FooterWrapper>
     )
 }
+
+export default Footer
