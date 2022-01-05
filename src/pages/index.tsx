@@ -5,27 +5,13 @@ import Footer from 'components/Common/Footer'
 import CategoryList from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList, { PostType } from 'components/Main/PostList'
+import { PostFrontmatterType, PostListItemType } from 'types/PostItem.types'
 import { graphql } from 'gatsby'
 
 type IndexPageProps = {
   data: {
     allMarkdownRemark: {
-      edges: [
-        {
-          node: {
-            id: string
-            frontmatter: {
-              title: string
-              summary: string
-              date: string
-              categories: string[]
-              thumbnail: {
-                publicURL: string
-              }
-            }
-          }
-        },
-      ]
+      edges: PostListItemType[]
     }
   }
 }

@@ -1,24 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import PostItem from 'components/Main/PostItem'
-
-export type PostType = {
-    node: {
-      id: string
-      frontmatter: {
-        title: string
-        summary: string
-        date: string
-        categories: string[]
-        thumbnail: {
-          publicURL: string
-        }
-      }
-    }
-  }
+import { PostListItemType } from 'types/PostItem.types'
   
+type PostItemProps = PostFrontmatterType & { link: string }
+
   type PostListProps = {
-    posts: PostType[]
+    posts: PostListItemType[]
   }
   
 
