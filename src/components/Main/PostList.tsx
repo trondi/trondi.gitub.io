@@ -5,7 +5,7 @@ import { PostListItemType } from 'types/PostItem.types'
   
 type PostItemProps = PostFrontmatterType & { link: string }
 
-  type PostListProps = {
+type PostListProps = {
     posts: PostListItemType[]
   }
   
