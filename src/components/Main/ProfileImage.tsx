@@ -19,7 +19,7 @@ type ProfileImageProps = {
         width: 80px;
         height: 80px;
       }
- `;
+ `
 
  const ProfileImage: FunctionComponent<ProfileImageProps> = function ({
     profileImage,
