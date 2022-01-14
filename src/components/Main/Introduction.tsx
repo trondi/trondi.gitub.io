@@ -48,18 +48,18 @@ const Title = styled.div`
       }
 `;
 
-const Introduction: FunctionComponent = function ({
+const Introduction: FunctionComponent<IntroductionProps> = function ({
     profileImage,
 }) {
     return (
         <Background>
             <Wrapper>
-            <ProfileImage profileImage={profileImage} />
+                <ProfileImage profileImage={profileImage} />
 
-                <div>
-                    <SubTitle>Nice to meet u,</SubTitle>
-                    <Title>I'm Junior Frontend developer Sookyoung</Title>
-                </div>
+                    <div>
+                        <SubTitle>Nice to meet u,</SubTitle>
+                        <Title>I'm Junior Frontend developer Sookyoung</Title>
+                    </div>
             </Wrapper>
         </Background>
     )

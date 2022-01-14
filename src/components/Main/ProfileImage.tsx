@@ -6,8 +6,8 @@ type ProfileImageProps = {
     profileImage: IGatsbyImageData
   }
 
-const PROFILE_IMAGE_LINK = 
- 'https://avatars.githubusercontent.com/u/42338190?s=400&u=da8964620e8e676ba45ed33fac68bb14e0d1b1f5&v=4';
+/*const PROFILE_IMAGE_LINK = 
+ 'https://avatars.githubusercontent.com/u/42338190?s=400&u=da8964620e8e676ba45ed33fac68bb14e0d1b1f5&v=4';*/
 
  const ProfileImageWrapper = styled(GatsbyImage)`
     width: 120px;

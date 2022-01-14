@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useMemo } from 'react'
 import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/GlobalStyed'
 import Footer from 'components/Common/Footer'
-import CategoryList from 'components/Main/CategoryList'
+import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList, { PostType } from 'components/Main/PostList'
 import { PostFrontmatterType, PostListItemType } from 'types/PostItem.types'
@@ -10,7 +10,7 @@ import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 
-export type PostFrontmatterType = {
+/*export type PostFrontmatterType = {
   title: string
   date: string
   categories: string[]
@@ -27,7 +27,7 @@ export type PostListItemType = {
     id: string
     frontmatter: PostFrontmatterType
   }
-}
+}*/
 
 type IndexPageProps = {
   location: {
