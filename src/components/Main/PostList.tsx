@@ -2,6 +2,8 @@ import React, { FunctionComponent, useMemo } from 'react'
 import styled from '@emotion/styled'
 import PostItem from 'components/Main/PostItem'
 import { PostFrontmatterType, PostListItemType } from 'types/PostItem.types'
+import useInfiniteScroll, { useInfiniteScrollType } from 'hooks/useInfiniteScroll'
+
   
 type PostItemProps = PostFrontmatterType & { link: string }
 
@@ -45,7 +47,12 @@ const PostList: FunctionComponent<PostListProps> = function ({
   selectedCategory,
   posts,
  }) {
-  const postListData = useMemo(
+  const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(
+    selectedCategory,
+    posts,
+  )
+
+  /*const postListData = useMemo(
     () => 
       posts.filter(({ node: { frontmatter: { categories } } }: PostListItemType) =>
       selectedCategory !== 'All'
@@ -53,17 +60,24 @@ const PostList: FunctionComponent<PostListProps> = function ({
       : true,
       ),
       [selectedCategory],
-  )
+  )*/
 
     return (
-      <PostListWrapper>
-        {postListData.map(({ node: { id, frontmatter } }:   PostListItemType) => (
+      <PostListWrapper ref={containerRef}>
+        {postList.map(
+          ({
+             node: {
+                id,
+                fields: { slug },
+                frontmatter,
+               },
+              }: PostListItemType) => (
             <PostItem
               {...frontmatter}
-              link="https://www.google.co.kr/"
+              link={slug} 
               key={id}
             />
-          )
+          ),
         )}
       </PostListWrapper>
     )
