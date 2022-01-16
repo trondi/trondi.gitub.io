@@ -9,6 +9,8 @@ import { PostFrontmatterType, PostListItemType } from 'types/PostItem.types'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
+import Template from 'components/Common/Template'
+
 
 /*export type PostFrontmatterType = {
   title: string
@@ -92,17 +94,15 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   )
 
   return (
-    <Container>
-      <GlobalStyle />
-      <Introduction profileImage={gatsbyImageData} />
-      <CategoryList
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
-      <PostList posts={edges} selectedCategory={ selectedCategory} />
-      <Footer />
-    </Container>
-  )
+      <Template>
+        <Introduction profileImage={gatsbyImageData} />
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+      </Template>
+    )
 }
 
 export default IndexPage
