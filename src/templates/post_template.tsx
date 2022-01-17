@@ -1,6 +1,8 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
+import { PostPageItemType } from 'types/PostItem.types'
 import Template from 'components/Common/Template'
+import PostHead from 'components/Post/PostHead'
 
 type PostTemplateProps = {}
 
