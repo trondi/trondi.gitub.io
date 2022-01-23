@@ -5,31 +5,11 @@ import Footer from 'components/Common/Footer'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList, { PostType } from 'components/Main/PostList'
-import { PostFrontmatterType, PostListItemType } from 'types/PostItem.types'
+import { PostListItemType } from 'types/PostItem.types'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 import Template from 'components/Common/Template'
-
-
-/*export type PostFrontmatterType = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: {
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
-    }
-  }
-}
-
-export type PostListItemType = {
-  node: {
-    id: string
-    frontmatter: PostFrontmatterType
-  }
-}*/
 
 type IndexPageProps = {
   location: {
@@ -46,12 +26,6 @@ type IndexPageProps = {
     }
   }
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },
