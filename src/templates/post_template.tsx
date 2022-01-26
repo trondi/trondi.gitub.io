@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 import { PostFrontmatterType } from 'types/PostItem.types'
 import Template from 'components/Common/Template'
 import PostHead from 'components/Post/PostHead'
+import PostContent from 'components/Post/PostContent'
 
 type PostTemplateProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostPageItemType[] // 존재하지 않는 타입이므로 에러가 발생하지만 일단 작성해주세요
+      edges: PostPageItemType[]
     }
   }
 }
@@ -40,6 +41,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
           categories={categories}
           thumbnail={gatsbyImageData}
         />
+         <PostContent html={html} />
     </Template>
   )
 }
