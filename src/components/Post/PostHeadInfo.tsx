@@ -10,12 +10,13 @@ export type PostHeadInfoProps = {
 }
 
 const PostHeadInfoWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 768px;
-    margin: 0 auto;
-    padding: 60px 0;
-    color: #ffffff;  
+  display: flex;
+  flex-direction: column;
+  width: 768px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: #ffffff;
 `
 
 const PrevPageIcon = styled.div`
