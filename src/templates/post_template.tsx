@@ -6,11 +6,10 @@ import PostHead from 'components/Post/PostHead'
 import PostContent from 'components/Post/PostContent'
 import CommentWidget from 'components/Post/CommentWidget'
 
-
 type PostTemplateProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostPageItemType[]
+      edges: []
     }
   }
 }
@@ -32,13 +31,13 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
     </Template>
   )
 }
-
+/*
 export type PostPageItemType = {
   node: {
     html: string
     frontmatter: PostFrontmatterType
   }
-}
+}*/
 
 export default PostTemplate
 
